@@ -9,6 +9,10 @@ Justificativa: O relatório oferece uma visão quantitativa das taxas de retorno
 
 ## Tecnologias
 
+O projeto utiliza primordialmente as seguintes tecnologias e ferramentas:
+Angular, HTML5, CSS3, TypeScript
+Knex, Excel
+
 
 ## Especificações Técnicas 
 
