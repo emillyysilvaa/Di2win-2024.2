@@ -11,6 +11,7 @@ Justificativa: O relatório oferece uma visão quantitativa das taxas de retorno
 
 O projeto utiliza primordialmente as seguintes tecnologias e ferramentas:
 Angular, HTML5, CSS3, TypeScript
+
 Knex, Excel
 
 
