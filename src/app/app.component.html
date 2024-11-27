@@ -1,0 +1,75 @@
+<main class="main">
+  <nav class="nav-bar">
+    <div class="logo">
+      <img src="../assets/di2win.png" alt="">
+    </div>
+      <img class="mob-menu" src="../assets/mobile.svg" alt="">
+    <div class="nav-links">
+      <a href="">Home</a>
+      <a class="active" href="">Relatório</a>
+      <a href="">A Empresa</a>
+      <a href="">Fale Conosco</a>
+    </div>
+  </nav>
+  <div id="opscreen" class="open-screen">
+    <div class="logo-screen">
+      <img src="../assets/di2win.png" alt="">
+      <div class="prog-bar"></div>
+    </div>
+  </div>
+  <div class="tabela">
+    <h2 class="titulo-tabela"><i class="bi bi-clipboard-data"></i> Relatório</h2>
+    <div class="filtros">
+      <select title="select" class="select-doc"  (change)="buscaSelect($event)">
+        <option selected disabled value="">Selecione um tipo</option>
+        <option value="">Nenhum</option>
+        <option value="cnh">CNH</option>
+        <option value="rg">RG</option>
+        <option value="cpf">CPF</option>
+        <option value="recibos">Recibos</option>
+        <option value="danfe">Danfe</option>
+        <option value="nfs">NFS</option>
+        <option value="comprovante_residencia">Comprovante de Residência</option>
+      </select>
+      <div class="input-pesquisa">
+        <input type="text" (input)="buscaInput($event)" placeholder="Digite um Nome do Documento" />
+        <img src="../assets/search.svg" alt="" class="lupa">
+      </div>
+      <button (click)="exportaDados()" class="exportar">
+        Baixar Excel <i class="bi bi-filetype-xlsx"></i>
+      </button>
+      <div class="pagination">
+        <span>Página {{ currentPage }}</span>
+        <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">
+          <img src="../assets/toggle.svg" alt="">
+        </button>
+        <button (click)="changePage(currentPage + 1)" [disabled]="currentPage * limit >= totalItems">
+          <img src="../assets/toggle.svg" alt="">
+        </button>
+      </div>
+    </div>
+    <div class="tbl">
+      <table>
+        <tr>
+          <th class="titulo-table">Tipo Documento</th>
+          <th class="titulo-table">Nome Documento</th>
+          <th class="titulo-table">Nome Campo</th>
+          <th class="titulo-table">Valor inicial</th>
+          <th class="titulo-table">Valor Final</th>
+          <th class="booleano titulo-table">Editado</th>
+          <th class="booleano titulo-table">Permaneceu vazio</th>
+        </tr>
+        <tr *ngFor="let item of dados">
+          <!-- <th> {{item.id}} </th> -->
+          <th> {{item.type_document}} </th>
+          <th> {{item.name_document}} </th>
+          <th> {{item.label}} </th>
+          <th> {{item.inital_value}} </th>
+          <th> {{item.final_value}} </th>
+          <th class="booleano"> {{item.edit ? 'Sim' : 'Não'}} </th>
+          <th class="booleano"> {{item.is_null ? 'Sim' : 'Não'}} </th>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+body{
+    animation: abrir 1s ease;
+    // overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+select{
+    display: block;
+}
+
+@keyframes opScreen {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes fechaScreen{
+    from{
+        translate: 0;
+    }
+    to{
+        translate: 0 100%;
+        display: none;
+    }
+}
+@keyframes abrir{
+    from{
+        opacity: 0.4;
+    }
+    to{
+        opacity: 1;
+    }
+}
