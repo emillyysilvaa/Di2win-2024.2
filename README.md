@@ -1,27 +1,28 @@
-# Di2win
+# Relatório de Análise de Taxas de Retorno de Documentos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.2.
+## Contexto do projeto
 
-## Development server
+Objetivo: Este projeto visa gerar relatórios detalhados sobre as taxas de retorno das informações nos documentos processados na plataforma ExtrAIdados, analisando mudanças e preenchimento de campos.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Justificativa: O relatório oferece uma visão quantitativa das taxas de retorno, proporcionando insights para melhoria contínua. A análise da integridade dos dados facilita a identificação de padrões e problemas recorrentes, embasando futuras otimizações.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tecnologias
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Especificações Técnicas 
 
-## Running unit tests
+Dados: Tipo de documento, nome do documento, nome do campo, valor inicial, valor final, indicação de alteração e preenchimento.
+Visualização: Utilização de cores para destacar dados corretos e incorretos, além de cálculo de percentuais de acerto e erro.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Metas
 
-## Running end-to-end tests
+Clareza: Apresentação de dados e conclusões de forma clara e objetiva.
+Precisão: Análise rigorosa das taxas de retorno, identificando padrões e tendências.
+Ação: Oferecer insights para otimizar o processo de extração de dados e garantir a qualidade das informações.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Em resumo, este projeto visa fornecer uma visão completa sobre o desempenho do processo de extração de dados, quantificando as taxas de acerto e erro e oferecendo insights para otimizar o processo e garantir a qualidade dos dados.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
